@@ -1,0 +1,16 @@
+;{{ ansible_managed }}
+
+$TTL 300
+@	1D SOA {{ bind_nameserver }}. {{ bind_email }}. (
+		{{ bind_reverse_date }} ; serial
+		3600  ;refresh
+		3600  ;retry
+		592200  ;expire
+		86400 );default_ttl
+; Define Name Servers
+@	NS	{{ bind_nameserver }}.
+; Define Records
+{% for entry in item.entries %}
+{{ entry.name }} {{ entry.type }} {{ entry.data }}
+{% endfor %}
+

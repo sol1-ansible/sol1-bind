@@ -1,0 +1,20 @@
+---
+galaxy_info:
+  role_name: bind
+  author: René Moser
+  company: Moser Systems
+  description: An ansible role for installing and managing bind
+  license: MIT
+  min_ansible_version: 2.6.0
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - all
+  categories:
+  - system
+  - networking
+
+dependencies: []
